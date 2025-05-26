@@ -4,18 +4,18 @@ Here are my tests
 
 ## initialization
 
-MongoDB:
-```
-mongosh -f data/init_mongo.js
-```
-
 Data:
 ```
+cd data
 python3 -m venv path/to/venv  
 source path/to/venv/bin/activate  
 pip install -r requirements.txt 
+python3 data_loader.py    
+```
 
-python3 data/data_loader.py    
+MongoDB:
+```
+mongosh --nodb -f init_mongo.js
 ```
 
 ## New use case: Top-10 last orders in state with product
